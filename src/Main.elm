@@ -46,7 +46,7 @@ update msg model =
                 ( subModuleModel, subModuleEffect ) =
                     SubModule.update subModuleMsg model.subModuleModel
             in
-            ( model
+            ( { model | subModuleModel = subModuleModel }
             , Effect.map SubModuleMsg (Effect.ApplyCmd subModuleEffect)
             )
 
