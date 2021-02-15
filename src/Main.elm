@@ -53,5 +53,5 @@ update msg model =
 
 view : Model -> Html.Html Msg
 view model =
-    div []
-        []
+    SubModule.view
+        |> Html.map SubModuleMsg

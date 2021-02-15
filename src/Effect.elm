@@ -33,3 +33,4 @@ map parentMsgConstructor effect =
 
         ApplyCmd cmd ->
             ApplyCmd (Cmd.map parentMsgConstructor cmd)
+
